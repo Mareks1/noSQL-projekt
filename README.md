@@ -10,8 +10,7 @@
 
 **Uwaga:**
 W pliku z projektem należy wpisać,
-[w tabelce](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables),
-informacje o komputerze na którym były wykonywane obliczenia:
+[w tabelce]
 
 * jaki procesor
 * ile pamięci RAM, jaki dysk (HD, SSD)
@@ -21,8 +20,8 @@ informacje o komputerze na którym były wykonywane obliczenia:
 
 TODO:
 
-- [ ] project page
-- [ ] _xxx.nb.html_
+- [ ] project page - edytowac
+- [ ] _xxx.nb.html_ - zrobic
 
 
 
