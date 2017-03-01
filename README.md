@@ -26,8 +26,6 @@ TODO:
 
 
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Procesor      | Pamięć RAM    | Dysk      | System operacyjny + wersja | wersje baz danych | wersje bibliotek |
+| ------------- |:-------------:| ---------:|:--------------------------:|:-----------------:|-----------------:|
+| uzupełnić     | uzupełnić     | uzupełnić | uzupełnić                  | uzupełnić         | uzupełnić        |
