@@ -1,4 +1,3 @@
-# Projekt z NoSQL
 # Marek Białousz
 
 (zaliczenie)
