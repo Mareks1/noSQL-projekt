@@ -8,10 +8,6 @@
 - [ ] MapReduce
 
 
-| Procesor      | Pamięć RAM    | Dysk      | System operacyjny + wersja | wersje baz danych | wersje bibliotek |
-| ------------- |:-------------:| ---------:|:--------------------------:|:-----------------:|-----------------:|
-| uzupełnić     | uzupełnić     | uzupełnić | uzupełnić                  | uzupełnić         | uzupełnić        |
-
 | Nazwa              | Wartość                      |
 |--------------------|------------------------------|
 | System operacyjny  | Windows 8.1 x64              |
