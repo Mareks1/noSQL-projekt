@@ -7,19 +7,14 @@
 (egzamin)
 - [ ] MapReduce
 
-**Uwaga:**
-W pliku z projektem należy wpisać,
 
 | Procesor      | Pamięć RAM    | Dysk      | System operacyjny + wersja | wersje baz danych | wersje bibliotek |
 | ------------- |:-------------:| ---------:|:--------------------------:|:-----------------:|-----------------:|
 | uzupełnić     | uzupełnić     | uzupełnić | uzupełnić                  | uzupełnić         | uzupełnić        |
 
-* jaki procesor
-* ile pamięci RAM, jaki dysk (HD, SSD)
-* jaki system operacyjny + wersja, 32-bit czy 64-bit
-* wersje użytych baz danych, wersje bibliotek (o ile były użyte jakieś biblioteki)
-
-TODO:
-
-- [ ] project page - edytowac
-- [ ] _xxx.nb.html_ - zrobic
+| System operacyjny  | Windows 8.1 x64 |
+| Procesor           | Intel Core i7-4510U 2.0 GHz|
+| Dysk               | Toshiba MQ01ABD025 1TB |
+| Pamięć RAM         | 8,0 GB |
+| Bazy danych        | TODO |
+| Biblioteki         | TODO |
