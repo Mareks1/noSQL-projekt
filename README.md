@@ -17,7 +17,18 @@
 | Bazy danych        | TODO                         |
 | Biblioteki         | TODO                         |
 
-|
+
+Zadanie GEO:
+
+TODO odnośnik na nowa strone
+
+
+
+
+
+
+
+
 ## Przedstawić dane
 
 Przykładowy rekord. Ile tego jest/będzie (w sztukach, w GB)
