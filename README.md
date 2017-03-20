@@ -19,6 +19,6 @@
 
 
 ## Zadanie GEO:
-Dane pobrane do zadania znajdują się na [stronie.](https://data.gov.uk/dataset/index-of-place-names-in-great-britain-july-20165).
+Dane pobrane do zadania znajdują się na [stronie](https://data.gov.uk/dataset/index-of-place-names-in-great-britain-july-20165).
 
 [Mapa1](https://Mareks1.github.io/noSQL-projekt/) 
