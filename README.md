@@ -20,6 +20,8 @@
 
 Zadanie GEO:
 
+[Zadanie GEO](https://Mareks1.github.io/noSQL-projekt/) 
+
 TODO odnośnik na nowa strone
 
 
