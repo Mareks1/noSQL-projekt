@@ -18,7 +18,8 @@
 | Biblioteki         | TODO                         |
 
 
-## Zadanie GEO:
-Dane pobrane do zadania znajdują się na [stronie](https://data.gov.uk/dataset/index-of-place-names-in-great-britain-july-20165).
+## Zadania indywidualne
+[Odnośnik do zadań](https://Mareks1.github.io/noSQL-projekt/)
 
-[Zadanie GEO]
+## Zadania grupowe
+[Odnośnik do zadań](https://romety2.github.io/nosql/)
