@@ -1,0 +1,189 @@
+body
+{
+	background: #FFEEEE;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu
+{
+	width: 25%;
+	font-size: 13px;
+	background: #FFCC33;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	border-radius: 10px;
+	opacity: 0.9;
+}
+
+.menu ul
+{
+	list-style-type: none;
+}
+
+.menu a:link
+{
+    color: #C71585;
+	text-decoration: none;
+}
+
+.menu a:visited
+{
+    color: #C71585;
+	text-decoration: none;
+}
+
+.menu a:hover
+{
+    color: #C71585;
+	text-decoration: none;
+}
+
+.menu a:active
+{
+    color: #C71585;
+	text-decoration: none;
+}
+
+.description-works ul
+{
+	list-style-type: none;
+}
+
+.description-works ul li
+{
+	margin: 5px;
+}
+
+.command
+{ 
+	text-align: left;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-left: 2%;
+	background-color: rgba(0, 0, 0, 0.04);
+	border-radius: 10px;
+	width: 75%;
+	margin: 0 auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.code
+{ 
+	text-align: left;
+	padding-left: 2%;
+	font-size: 85%;
+	background-color: rgba(0, 0, 0, 0.04);
+	border-radius: 10px;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.informations 
+{
+	border-style: double;
+	border-color: #000000;
+	border-width: 3px;
+	border-collapse: collapse;
+	font-size: 13px;
+}
+.informations th		
+{
+	text-align: center;
+	border-width: 0.5px;
+	padding: 2px;
+	border-style: solid;
+	border-color: #000000;
+	background: #E6E6FA;
+}
+.informations td
+{
+	text-align: center;
+	border-width: 0.5px;
+	padding: 2px;
+	border-style: solid;
+	border-color: #000000;
+	background: #F8F8FF;
+}
+
+.summary 
+{
+	width: 95%;
+	border-style: double;
+	border-color: #000000;
+	border-width: 3px;
+	border-collapse: collapse;
+	font-size: 20px;
+	text-align: center;
+}
+.summary th		
+{
+	border-width: 0.5px;
+	padding: 2px;
+	border-style: solid;
+	border-color: #000000;
+	background: #E6E6FA;
+}
+.summary td
+{
+	border-width: 0.5px;
+	padding: 2px;
+	border-style: solid;
+	border-color: #000000;
+	background: #F8F8FF;
+}
+
+.description
+{
+	color: #482F4B;
+	text-align: justify;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.description-center
+{
+	color: #482F4B;
+	text-align: center;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.text-center
+{
+	text-align: center;
+}
+
+.table-center
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description-data
+{
+	font-size: 17px;
+}
+
+.description-team
+{
+	font-size: 20px;
+}
+
+.map-center
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description-image
+{
+	font-size: 10px;
+	text-align: center;
+	font-style: italic;
+}
+
+.return
+{
+	font-size: 10px;
+}
