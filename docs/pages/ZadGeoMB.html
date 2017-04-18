@@ -61,19 +61,49 @@
 		<h2 id="iiko">Instalacja i konfiguracja oprogramowania</h2>
 		<h3 id="iiko1">postgreSQL</h3>
 		<p>
-			TODO
+			Baza, na której odbywały się badania - postrgeSQL.
+		</br>
+			Link do pobrania - <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target="_blank">TUTAJ</a>.
 		</p>
 		<h3 id="iiko2">jdk</h3>
 		<p>
-			TODO
+			Do badań na bazie elasticsearch potrzebny jest jdk.
+		</br>
+			Link do pobrania - <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">TUTAJ</a>.
+		</br>
+			Konfiguracja zmiennych środowiskowych:
+		</br>
+			<div class="text-center">
+				<i>Panel sterowania -> System -> Zmień ustawienia -> Zaawansowane (zakładka) -> Zmienne środowiskowe...</i>
+			</div>
+			</br>
+			W <i>zmienne systemowe</i> szukamy zmiennej <i>JAVA_HOME</i> oraz sprawdzamy czy ścieżka
+			jest ustawiona na zainstalowany przez z nas <i>jdk</i>.
+			</br>
+			Jeśli nie, zaznaczamy zmienną, klikamy <i>Edytuj...</i> oraz zmieniamy ścieżkę i ponownie uruchamiamy komputer.
 		</p>
 		<h3 id="iiko3">jq</h3>
 		<p>
-			TODO
+			W pracy konieczne będzie przekształcenie danych . Konieczna jest instalacja frameworka Chocolatey oraz narzędzia jq.
+		</br>
+			Polecenia w cdm (tryb administratora):
+			<div class="command">
+				<code>
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+				</code>
+			</div>
+			Następnie:
+			<div class="command">
+				<code>
+chocolatey install jq
+				</code>
+			</div>
 		</p>
 		<h3 id="iiko4">python</h3>
 		<p>
-			TODO
+			Python będzie potrzebny do uruchomienia skryptów.
+		</br>
+			Link do pobrania - <a href="https://www.python.org/downloads/windows/" target="_blank">TUTAJ</a>.
 		</p>
 		</br>
 		<h2 id="psql">PostgreSQL</h2>
