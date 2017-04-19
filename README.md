@@ -7,7 +7,7 @@
 - [ ] Aggregation Pipeline
 - [ ] MapReduce
 
-## Zadania indywidualne
+## Zadanie indywidualne
 [Odnośnik do zadań](https://Mareks1.github.io/noSQL-projekt/)
 
 ## Zadania grupowe
