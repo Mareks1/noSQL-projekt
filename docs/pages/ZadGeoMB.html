@@ -197,7 +197,7 @@ select * from import.test limit 1;
 		</p>
 		<h3 id="psql4">zapytania geodezyjne</h3>
 		<p>
-			Aby korzystać z zapytań geodezyjnych należy pobrać PostGis - <a href="http://postgis.net/" target="_blank">strony</a> <i>LINK</i>.</br>
+			Aby korzystać z zapytań geodezyjnych należy pobrać PostGis - <a href="http://postgis.net/" target="_blank">LINK</a></br>
 			Należy zmienić nazwy kolumn</br>
 			<i>x</i> na <i>longitude</i>
 			<div class="command">
@@ -216,6 +216,7 @@ alter table import.test rename y to latitude;
 				<code>
 select * from import.test where ST_MakeEnvelope(-2.1, 57.15, -2.19, 57.25, -2.20, 57.35);
 				</code>
+			</div>
 		</p>
 		<h2 id="es">Elasticsearch</h2>
 		<h3 id="es1">przekształcenie danych</h3>			
