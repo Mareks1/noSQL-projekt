@@ -1,10 +1,10 @@
 # Marek Białousz
 
 (zaliczenie)
-- [ ] EDA
-- [ ] Aggregation Pipeline
+- [X] EDA
 
 (egzamin)
+- [ ] Aggregation Pipeline
 - [ ] MapReduce
 
 
