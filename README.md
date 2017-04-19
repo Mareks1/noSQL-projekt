@@ -23,10 +23,3 @@
 
 ## Zadania grupowe
 [Odnośnik do zadań](https://romety2.github.io/nosql/)
-
-
-
-<div class="text-center">
-				<script src="https://embed.github.com/view/geojson/Mareks1/noSQL-projekt/master/data/map1.geojson"></script>
-			</div>
-</br>
