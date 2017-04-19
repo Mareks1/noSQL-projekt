@@ -132,7 +132,25 @@ psql -U postgres
 		</p>	
 		<h3 id="psql2">import danych</h3>
 		<p>
-			TODO	
+			1. Pobrać dane - <a href="geoportal.statistics.gov.uk/datasets/055c2d8135ca4297a85d624bb68aefdb_0.csv">LINK</a> dane.
+		</br></br>
+			2. Pobrać skrypt - <a href="../../scripts/s1.py" download>LINK</a>
+		</br>
+			Skrypt trzeba umieścić w folderze z danymi. Jest on potrzebny, ponieważ usunie znaki nie kodowane w <i>windows-1250</i> w cmd.
+		</br>
+			<div class="command">
+				<code>
+py s1.py
+				</code>
+			</div>
+			3. Pobrać <i>pgfutter</i>, oraz zamień nazwę pobranego pliku na pgfutter.exe.
+			Następnie zaimportować dane do postreSQL'a (wszystkie pliki w tym samym katalogu): 
+			<div class="command">
+				<code>
+pgfutter --pass "[hasło]" --table "test" csv map.csv
+				</code>
+			</div>
+		</br>
 		</p>
 		<h3 id="psql3">przykładowy rekord</h3>
 		<p>
