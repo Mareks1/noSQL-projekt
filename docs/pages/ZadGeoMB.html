@@ -221,7 +221,32 @@ select * from import.test where ST_MakeEnvelope(-2.1, 57.15, -2.19, 57.25, -2.20
 		<h2 id="es">Elasticsearch</h2>
 		<h3 id="es1">przekształcenie danych</h3>			
 		<p>
-			TODO
+			Pobierz dane - <a href="geoportal.statistics.gov.uk/datasets/055c2d8135ca4297a85d624bb68aefdb_0.geojson">LINK</a>
+			</br></br>
+			Plik z danymi, wymaga zmiany nazwy gdyż nie może zawierać znaków takich jak: _. Można zamienić nazwę na <i>map.geojson</i>.
+			</br>
+			Polecenie aby przekształcić pole features z pobranego pliku:
+			<div class="command">
+				<code>
+jq ".features[] | (.geometry.coordinates | map( .*1000|floor|./1000)) as $l | .properties |= .+ {location: $l} | .properties" map.geojson > mapPom.geojson
+				</code>
+			</div>
+			Zużycie zasobów komputera.
+			</br></br>
+			<div class="text-center">
+				<img src="../images/pdelastic.PNG" height="400em" width="500em">
+			</div>
+			<div class="description-image">Zasoby komputera podczas przekształcania danych</div>
+			</br></br>
+			Wykonanie polecenia trwało 30 minut.
+			</br></br>
+			Następnie należy wydać polecenie:
+			<div class="command">
+				<code>
+< mapPom.geojson jq --compact-output "{ \"index\": { \"_type\": \"test\" } }, ." > mapPom.bulk
+				</code>
+			</div>
+			Tutaj dane zostały szybko przekształcone.
 		</p>
 		</br>
 		<h3 id="es2">import danych</h3>
