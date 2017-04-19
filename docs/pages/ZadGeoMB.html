@@ -132,9 +132,9 @@ psql -U postgres
 		</p>	
 		<h3 id="psql2">import danych</h3>
 		<p>
-			1. Pobrać dane - <a href="geoportal.statistics.gov.uk/datasets/055c2d8135ca4297a85d624bb68aefdb_0.csv">LINK</a>.
+			1. Pobrać dane
 		</br></br>
-			2. Pobrać skrypt - <a href="../../scripts/s1.py" download>LINK</a>
+			2. Pobrać skrypt
 		</br>
 			Skrypt trzeba umieścić w folderze z danymi. Jest on potrzebny, ponieważ usunie znaki nie kodowane w <i>windows-1250</i> w cmd.
 		</br>
@@ -150,6 +150,20 @@ py s1.py
 pgfutter --pass "[hasło]" --table "test" csv map.csv
 				</code>
 			</div>
+		</br>
+		Zużycie zasobów komputera podczas importu danych.
+			<div class="text-center">
+				<img src="../images/wydpsql.PNG" height="440em" width="500em">
+			</div>
+			<div class="description-image">Import danych do postreSQL</div>
+		</br></br>
+		Cały proces trwał ok. 4 min.
+		</br>
+			Po zakończeniu importu pojawił się komunikat o ilości zaimportowanych wierszy.
+			<div class="text-center">
+				<img src="../images/endimport.PNG" height="120em" width="1200em">
+			</div>
+			<div class="description-image">Import danych do postgreSQL</div>
 		</br>
 		</p>
 		<h3 id="psql3">przykładowy rekord</h3>
