@@ -251,7 +251,51 @@ jq ".features[] | (.geometry.coordinates | map( .*1000|floor|./1000)) as $l | .p
 		</br>
 		<h3 id="es2">import danych</h3>
 		<p>
-			TODO
+			1. Teraz trzeba pobrać ElasticSearch - <a href="https://www.elastic.co/downloads/elasticsearch" target="_blank">LINK</a>
+		</br>
+			2. Uruchom serwer w konsoli cmd
+			<div class="command">
+				<code>
+[ścieżka gdzie znajduje się pobrany elasticsearch]\elasticsearch-5.3.0\bin\elasticsearch.bat
+				</code>
+				</div>
+			3. Trzeba pobrać narzędzie Curl - <a href="https://curl.haxx.se/download.html" target="_blank">LINK</a>
+			4. Plik binarny (.exe) skopiować do folderu roboczego
+			5. W nowej konsoli należy stworzyć bazę danych z mappingiem:
+			<div class="command">
+				<code>
+curl -XPUT http://localhost:9200/test -d "{\"mappings\": {\"place\": {\"properties\": {\"objectid\": {\"type\": \"integer\"},\"pcd2\": {\"type\": \"string\"},\"pcds\": {\"type\": \"string\"},\"dointr\": {\"type\": \"string\"},\"oseast100m\": {\"type\": \"string\"},\"osnrth100m\": {\"type\": \"string\"},\"oscty\": {\"type\": \"string\"},\"odslaua\": {\"type\": \"string\"},\"oslaua\": {\"type\": \"string\"},\"osward\": {\"type\": \"string\"},\"usertype\": {\"type\": \"string\"},\"osgrdind\": {\"type\": \"string\"},\"ctry\": {\"type\": \"string\"},\"oshlthau\": {\"type\": \"string\"},\"gor\": {\"type\": \"string\"},\"oldha\": {\"type\": \"string\"},\"nhscr\": {\"type\": \"string\"},\"ccg\": {\"type\": \"string\"},\"psed\": {\"type\": \"string\"},\"cened\": {\"type\": \"string\"},\"edind\": {\"type\": \"string\"},\"ward98\": {\"type\": \"string\"},\"oa01\": {\"type\": \"string\"},\"nhsrg\": {\"type\": \"string\"},\"hro\": {\"type\": \"string\"},\"lsoa01\": {\"type\": \"string\"},\"ur01ind\": {\"type\": \"string\"},\"msoa01\": {\"type\": \"string\"},\"cannet\": {\"type\": \"string\"},\"scn\": {\"type\": \"string\"},\"oshaprev\": {\"type\": \"string\"},\"oldpct\": {\"type\": \"string\"},\"oldhro\": {\"type\": \"string\"},\"pcon\": {\"type\": \"string\"},\"canreg\": {\"type\": \"string\"},\"pct\": {\"type\": \"string\"},\"oseast1m\": {\"type\": \"string\"},\"osnrth1m\": {\"type\": \"string\"},\"oa11\": {\"type\": \"string\"},\"lsoa11\": {\"type\": \"string\"},\"msoa11\": {\"type\": \"string\"},\"location\": {\"type\": \"geo_point\" }}}}}"
+				</code>
+			</div>
+			</br>
+			6. Import danych: 
+			<div class="command">
+				<code>
+curl -XPOST localhost:9200/test/_bulk --data-binary @mapPom.bulk		
+				</code>
+			</div>
+			</br></br>
+			<div class="text-center">
+				<img src="../images/imp.PNG" height="400em" width="500em">
+			</div>
+			<div class="description-image">Zużycie zasobów komputera podczas importu danych do elasticsearch</div>
+			</br></br>
+			Proces importu trwał ok. 55 min.
+			</br>
+			7. Sprawdzenie zaimportowanych danych, polecenie:
+			<div class="command">
+				<code>
+curl -XGET localhost:9200/test/_count
+				</code>
+			</div>
+			8. Sprawdzenie zaimportowanych danych, komunikat:
+			<div class="code">
+				<pre>
+					<code>
+{"count":2593613,"_shards":{"total":5,"successful":5,"failed":0}}
+					</code>
+				</pre>
+</div>
 		</p>
 		<h3 id="es3">przykładowy rekord</h3>
 		<p>
