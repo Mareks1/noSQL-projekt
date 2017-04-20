@@ -260,7 +260,9 @@ jq ".features[] | (.geometry.coordinates | map( .*1000|floor|./1000)) as $l | .p
 				</code>
 				</div>
 			3. Trzeba pobrać narzędzie Curl - <a href="https://curl.haxx.se/download.html" target="_blank">LINK</a>
+			</br>
 			4. Plik binarny (.exe) skopiować do folderu roboczego
+			</br>
 			5. W nowej konsoli należy stworzyć bazę danych z mappingiem:
 			<div class="command">
 				<code>
@@ -276,7 +278,7 @@ curl -XPOST localhost:9200/test/_bulk --data-binary @mapPom.bulk
 			</div>
 			</br></br>
 			<div class="text-center">
-				<img src="../images/imp.PNG" height="400em" width="500em">
+				<img src="../images/imp.PNG" height="700em" width="500em">
 			</div>
 			<div class="description-image">Zużycie zasobów komputera podczas importu danych do elasticsearch</div>
 			</br></br>
