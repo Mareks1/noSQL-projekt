@@ -301,7 +301,24 @@ curl -XGET localhost:9200/test/_count
 		</p>
 		<h3 id="es3">przykładowy rekord</h3>
 		<p>
-			TODO
+			Po zaimportowaniu danych:
+		</p>
+			<div class="command">
+				<code>
+curl -s "http://localhost:9200/test/_search?size=1&pretty=1" | jq .hits.hits[].\"_source\"
+				</code>
+			</div>
+			</br></br>
+			<div class="text-center">
+				<img src="../images/rek1.PNG" height="400em" width="500em">
+			</div>
+			<div class="description-image">Przykładowy rekord</div>
+			</br></br>
+			<div class="text-center">
+				<img src="../images/rek2.PNG" height="400em" width="500em">
+			</div>
+			<div class="description-image">Przykładowy rekord cd.</div>
+			</br></br>
 		</p>
 			TODO
 		</p>
