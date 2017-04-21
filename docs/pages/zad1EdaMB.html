@@ -199,7 +199,52 @@ delete from import.test where x='' and y='';
 		<h2 id="es">Elasticsearch</h2>
 		<h3 id="es1">import danych</h3>
 		<p>
-			TODO
+			1. Pobierz plik z danymi - <a href="https://data.gov.uk/dataset/national-statistics-postcode-lookup-latest-centroids">LINK</a>
+		</br>
+			2. pobierz skrypt.
+			3. Uruchom skrypt w tym samym folderze, gdzie znajudują się wszystkie dane.
+		</br>
+			(Działanie skryptu - usuwa pierwszy wiersz (nazwy kolumn) oraz zapisuje do pliku <i>map.csv</i>)
+			<div class="command">
+				<code>
+py s2.py
+				</code>
+		</br>
+			4. Pobrać curl - <a href="https://curl.haxx.se/download.html" target="_blank">strony</a> <i>LINK</i>
+		</br>
+			Umieścić curl.exe do roboczego folderu.
+		</br>
+			5. Pobrać logstash - <a href="https://www.elastic.co/downloads/logstash">LINK</a>
+		</br>
+			6. Pobrać plik konfiguracyjny 
+		</br>
+			Pliki binarne <i>logstash</i>, polecenie <i>cmd</i>:
+			<div class="command">
+				<code>
+cd [ścieżka gdzie pobrano logstash]\logstash-5.3.0\bin	
+				</code>
+			</div>	
+			Do tego folderu trzeba przenieść plik konfiguracyjny:
+			<div class="command">
+				<code>
+copy [ścieżka gdzie pobrano plik konfiguracyjny]\btc.conf [ścieżka gdzie pobrano logstash]\logstash-5.3.0\bin	
+				</code>
+			</div>
+			Plik <i>map.csv</i> trzeba przenieść na dysk <i>C</i>:
+			<div class="command">
+				<code>
+copy [ścieżka gdzie znajduje się plik map]\map.csv C:\
+				</code>
+			</div>
+			</br>
+			7. Polecenie:
+			<div class="command">
+				<code>
+logstash -f btc.conf
+				</code>
+			</div>
+			</br>
+			Tutaj wkleić screeny i wyniki!!!!!!!!!
 		</p>
 		<h3 id="es2">przykładowy rekord</h3>
 		<p>
