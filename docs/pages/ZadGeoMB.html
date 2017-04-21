@@ -17,14 +17,14 @@
 		<p class="description-team">
 			To zadanie zostało wykonane przez - Marek Białousz.
 			</br>
-			Przedstawiono
+			Przedstawiono:
 			</br>
-			Zadania geodezyjne w bazach danych 
-			<i>posgreSQL</i> oraz <i>elasticsearch</i>.
+			---Zadania geodezyjne w bazach danych 
+			<i>postgreSQL</i> oraz <i>elasticsearch</i>.
 			</br>
-			Czas wykonania oraz ilość zużytych zasobów.
+			---Czas wykonania oraz ilość zużytych zasobów.
 			</br>
-			Opis danych oraz instrukcja.
+			---Opis danych oraz instrukcja.
 			</br>
 		</p>
 		<div class="menu">
@@ -32,24 +32,24 @@
 				<li><a href="#iod">Informacje o danych</a></li>
 				<li><a href="#iiko">Instalacja i konfiguracja oprogramowania</a></li>
 				<ul>
-					<li><a href="#iiko1">postgreSQL</a></li>
-					<li><a href="#iiko2">jdk</a></li>
-					<li><a href="#iiko3">jq</a></li>
-					<li><a href="#iiko4">python</a></li>
+					<li><a href="#iiko1">PostgreSQL</a></li>
+					<li><a href="#iiko2">Jdk</a></li>
+					<li><a href="#iiko3">Jq</a></li>
+					<li><a href="#iiko4">Python</a></li>
 				</ul>
 				<li><a href="#psql">PostgreSQL</a></li>
 				<ul>
-					<li><a href="#psql1">utworzenie tabeli</a></li>
-					<li><a href="#psql2">import danych</a></li>
-					<li><a href="#psql3">przykładowy rekord</a></li>
-					<li><a href="#psql4">zapytania geodezyjne</a></li>
+					<li><a href="#psql1">Utworzenie tabeli</a></li>
+					<li><a href="#psql2">Import danych</a></li>
+					<li><a href="#psql3">Przykładowy rekord</a></li>
+					<li><a href="#psql4">Zapytania geodezyjne</a></li>
 				</ul>
 				<li><a href="#es">Elasticsearch</a></li>
 				<ul>
-					<li><a href="#es1">przekształcenie danych</a></li>
-					<li><a href="#es2">import danych</a></li>
-					<li><a href="#es3">przykładowy rekord</a></li>
-					<li><a href="#es4">zapytania geodezyjne (mapki)</a></li>
+					<li><a href="#es1">Przekształcenie danych</a></li>
+					<li><a href="#es2">Import danych</a></li>
+					<li><a href="#es3">Przykładowy rekord</a></li>
+					<li><a href="#es4">Zapytania geodezyjne (mapki)</a></li>
 				</ul>
 			</ul>
 		</div>
@@ -65,13 +65,13 @@
 		</p>
 		</br>	
 		<h2 id="iiko">Instalacja i konfiguracja oprogramowania</h2>
-		<h3 id="iiko1">postgreSQL</h3>
+		<h3 id="iiko1">PostgreSQL</h3>
 		<p>
-			Baza, na której odbywały się badania - postrgeSQL.
+			Baza, na której odbywały się badania - postgreSQL.
 		</br>
 			Link do pobrania - <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target="_blank">TUTAJ</a>.
 		</p>
-		<h3 id="iiko2">jdk</h3>
+		<h3 id="iiko2">Jdk</h3>
 		<p>
 			Do badań na bazie elasticsearch potrzebny jest jdk.
 		</br>
@@ -88,7 +88,7 @@
 			</br>
 			Jeśli nie, zaznaczamy zmienną, klikamy <i>Edytuj...</i> oraz zmieniamy ścieżkę i ponownie uruchamiamy komputer.
 		</p>
-		<h3 id="iiko3">jq</h3>
+		<h3 id="iiko3">Jq</h3>
 		<p>
 			W pracy konieczne będzie przekształcenie danych . Konieczna jest instalacja frameworka Chocolatey oraz narzędzia jq.
 		</br>
@@ -105,7 +105,7 @@ chocolatey install jq
 				</code>
 			</div>
 		</p>
-		<h3 id="iiko4">python</h3>
+		<h3 id="iiko4">Python</h3>
 		<p>
 			Python będzie potrzebny do uruchomienia skryptów.
 		</br>
@@ -113,9 +113,9 @@ chocolatey install jq
 		</p>
 		</br>
 		<h2 id="psql">PostgreSQL</h2>
-		<h3 id="psql1">utworzenie tabeli</h3>
+		<h3 id="psql1">Utworzenie tabeli</h3>
 		<p>
-			Aby uruchomić serwer, trzeba przejść do pliku binarnego posgreSQL'a, polecenie w konsoli cmd:
+			Aby uruchomić serwer, trzeba przejść do pliku binarnego postgreSQL'a, polecenie w konsoli cmd:
 			<div class="command">
 				<code>
 cd [ścieżka gdzie jest zainstalowany postgreSQL]\PostgreSQL\9.6\bin
@@ -130,13 +130,13 @@ psql -U postgres
 			oraz podajemy hasło które ustawiliśmy przy instalacji postgreSQL'a.
 		</br>
 		</p>	
-		<h3 id="psql2">import danych</h3>
+		<h3 id="psql2">Import danych</h3>
 		<p>
 			1. Pobrać dane
 		</br></br>
 			2. Pobrać skrypt
 		</br>
-			Skrypt trzeba umieścić w folderze z danymi. Jest on potrzebny, ponieważ usunie znaki nie kodowane w <i>windows-1250</i> w cmd.
+			Skrypt trzeba umieścić w folderze z danymi. Jest on potrzebny, ponieważ usunie znaki, które nie są kodowane w <i>windows-1250</i> w cmd.
 		</br>
 			<div class="command">
 				<code>
@@ -144,6 +144,7 @@ py s1.py
 				</code>
 			</div>
 			3. Pobrać <i>pgfutter</i>, oraz zamień nazwę pobranego pliku na pgfutter.exe.
+		</br>
 			Następnie zaimportować dane do postreSQL'a (wszystkie pliki w tym samym katalogu): 
 			<div class="command">
 				<code>
@@ -151,7 +152,7 @@ pgfutter --pass "[hasło]" --table "test" csv map.csv
 				</code>
 			</div>
 		</br>
-		Zużycie zasobów komputera podczas importu danych.
+		Zużycie zasobów komputera podczas importu danych ukazuje poniższa grafika.
 			<div class="text-center">
 				<img src="../images/wydpsql.PNG" height="445em" width="500em">
 			</div>
@@ -160,21 +161,22 @@ pgfutter --pass "[hasło]" --table "test" csv map.csv
 		Cały proces trwał ok. 4 min.
 		</br>
 			Po zakończeniu importu pojawił się komunikat o ilości zaimportowanych wierszy.
+		</br>
 			<div class="text-center">
 				<img src="../images/endimport.PNG" height="135em" width="1200em">
 			</div>
 			<div class="description-image">Import danych do postgreSQL</div>
 		</br>
 		</p>
-		<h3 id="psql3">przykładowy rekord</h3>
+		<h3 id="psql3">Przykładowy rekord</h3>
 		<p>
-			Uruchamiamy serwer
+			1. Należy uruchamić serwer
 			<div class="command">
 				<code>
 cd [ścieżka gdzie jest zainstalowany postgreSQL]\PostgreSQL\9.6\bin
 				</code>
 			</div>
-			Następnie logowanie
+			2. Trzeba się zalogować.
 			<div class="command">
 				<code>
 psql -U postgres
@@ -183,29 +185,32 @@ psql -U postgres
 			</br></br>
 		</p>
 		<p>
-			Polecenie aby wyświetlić przykładowe dane:
+			3. Polecenie aby wyświetlić przykładowe dane:
 			<div class="command">
 				<code>
 select * from import.test limit 1;
 				</code>
 			</div>
-			Wynik zapytania: 
+			Wynik zapytania:
+		</br>
 			<div class="text-center">
 				<img src="../images/1wpsql.PNG" height="350em" width="1200em">
 			</div>
 <div class="description-image">Przykładowy rekord postreSQL</div>
 		</p>
-		<h3 id="psql4">zapytania geodezyjne</h3>
+		<h3 id="psql4">Zapytania geodezyjne</h3>
 		<p>
-			Aby korzystać z zapytań geodezyjnych należy pobrać PostGis - <a href="http://postgis.net/" target="_blank">LINK</a></br>
-			Należy zmienić nazwy kolumn</br>
-			<i>x</i> na <i>longitude</i>
+			Aby korzystać z zapytań geodezyjnych należy pobrać PostGis - <a href="http://postgis.net/" target="_blank">LINK</a>
+		</br>
+			Należy zmienić nazwy kolumn
+		</br>
+			- <i>x</i> na <i>longitude</i>
 			<div class="command">
 				<code>
 alter table import.test rename x to longitude;
 				</code>
 			</div>
-			<i>y</i> na <i>latitude</i>
+			- <i>y</i> na <i>latitude</i>
 			<div class="command">
 				<code>
 alter table import.test rename y to latitude;
@@ -219,13 +224,13 @@ select * from import.test where ST_MakeEnvelope(-2.1, 57.15, -2.19, 57.25, -2.20
 			</div>
 		</p>
 		<h2 id="es">Elasticsearch</h2>
-		<h3 id="es1">przekształcenie danych</h3>			
+		<h3 id="es1">Przekształcenie danych</h3>			
 		<p>
 			Pobierz plik z danymi (.geojson) - <a href="https://data.gov.uk/dataset/national-statistics-postcode-lookup-latest-centroids">LINK</a>
 			</br></br>
 			Plik z danymi, wymaga zmiany nazwy gdyż nie może zawierać znaków takich jak: _. Można zamienić nazwę na <i>map.geojson</i>.
 			</br>
-			Polecenie aby przekształcić pole features z pobranego pliku:
+			Polecenie, aby przekształcić pole features z pobranego pliku:
 			<div class="command">
 				<code>
 jq ".features[] | (.geometry.coordinates | map( .*1000|floor|./1000)) as $l | .properties |= .+ {location: $l} | .properties" map.geojson > mapPom.geojson
@@ -249,7 +254,7 @@ jq ".features[] | (.geometry.coordinates | map( .*1000|floor|./1000)) as $l | .p
 			Tutaj dane zostały szybko przekształcone.
 		</p>
 		</br>
-		<h3 id="es2">import danych</h3>
+		<h3 id="es2">Import danych</h3>
 		<p>
 			1. Teraz trzeba pobrać ElasticSearch - <a href="https://www.elastic.co/downloads/elasticsearch" target="_blank">LINK</a>
 		</br>
@@ -299,7 +304,7 @@ curl -XGET localhost:9200/test/_count
 				</pre>
 			</div>
 		</p>
-		<h3 id="es3">przykładowy rekord</h3>
+		<h3 id="es3">Przykładowy rekord</h3>
 		<p>
 			Po zaimportowaniu danych:
 		</p>
@@ -320,7 +325,7 @@ curl -s "http://localhost:9200/test/_search?size=1&pretty=1" | jq .hits.hits[].\
 			<div class="description-image">Przykładowy rekord cd.</div>
 			</br></br>
 		</p>
-		<h3 id="es4">polecenia geodezyjne (mapki)</h3>
+		<h3 id="es4">Polecenie geodezyjne (mapki)</h3>
 			Polecenie, które pokaże pierwsze 2000 danych:
 			<div class="command">
 				<code>
