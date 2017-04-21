@@ -120,10 +120,48 @@ pgfutter --pass "[hasło]" --table "test" csv map.csv
 			</div>
 		</br>
 			Zużycie zasobów komputera podczas importu danych.
+			<div class="text-center">
+				<img src="../images/wydpsql.PNG" height="445em" width="500em">
+			</div>
+			<div class="description-image">Import danych do postreSQL</div>
+		</br></br>
+			Cały proces trwał ok. 4 min.
+		</br>
+			Po zakończeniu importu pojawił się komunikat o ilości zaimportowanych wierszy.
+			<div class="text-center">
+				<img src="../images/endimport.PNG" height="135em" width="1200em">
+			</div>
+			<div class="description-image">Import danych do postgreSQL</div>
+		</br>
 		</p>
 		<h3 id="psql2">przykładowy rekord</h3>
 		<p>
-			TODO
+			Uruchamiamy serwer
+			<div class="command">
+				<code>
+cd [ścieżka gdzie jest zainstalowany postgreSQL]\PostgreSQL\9.6\bin
+				</code>
+			</div>
+			Następnie logowanie
+			<div class="command">
+				<code>
+psql -U postgres
+				</code>
+			</div>
+			</br></br>
+		</p>
+		<p>
+			Polecenie aby wyświetlić przykładowe dane:
+			<div class="command">
+				<code>
+select * from import.test limit 1;
+				</code>
+			</div>
+			Wynik zapytania: 
+			<div class="text-center">
+				<img src="../images/1wpsql.PNG" height="350em" width="1200em">
+			</div>
+			<div class="description-image">Przykładowy rekord postreSQL</div>
 		</p>
 		<h3 id="psql3">ilość danych</h3>
 		<p>
