@@ -173,14 +173,27 @@ select count(*) from import.test;
 			</div>
 			2. Komunikat:
 			<div class="text-center">
-				<img src="../images/wiersze.PNG" height="130em" width="150em">
+				<img src="../images/wiersze.PNG" height="130em" width="650em">
 			</div>
 			<div class="description-image">Ilość danych postreSQL</div>
 			Czas wykonania zapytania - ok. 2 sekundy.
 		</p>	
 		<h3 id="psql4">usuwanie danych</h3>
 		<p>
-			TODO
+			Niektóre kolumny zawierają puste pola np. kolumny ze współrzędnymi <i>x</i> oraz <i>y</i>.
+			</br>
+			Polecenie do usunięcia:
+			<div class="command">
+				<code>
+delete from import.test where x='' and y='';
+				</code>
+			</div>
+			</br>
+			<div class="text-center">
+				<img src="../images/delete.PNG" height="130em" width="650em">
+			</div>
+			<div class="description-image">Ilość usuniętych pól w postreSQL</div>
+			Czas wykonania zapytania - ok. 2 sekundy.
 		</p>
 		<h3 id="psql5">wyświetlenie danych</h3>
 		<p>
