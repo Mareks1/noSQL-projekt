@@ -17,40 +17,40 @@
 		<p class="description-team">
 			To zadanie zostało wykonane przez - Marek Białousz.
 			</br>
-			Przedstawiono
+			Przedstawiono:
 			</br>
-			Zapytania w bazach danych <i>postgreSQL</i> oraz <i>elasticsearch</i>.
+			---Zapytania w bazach danych <i>postgreSQL</i> oraz <i>elasticsearch</i>.
 			</br>
-			Czas wykonania oraz ilość zużytych zasobów.
+			---Czas wykonania oraz ilość zużytych zasobów.
 			</br>
-			Podsumowanie i porównanie użytych baz danych.
+			---Podsumowanie i porównanie użytych baz danych.
 			</br>
-			Opis danych oraz instrukcja.
+			---Opis danych oraz instrukcja.
 		</p>
 		<div class="menu">
 			<ul>
 				<li><a href="#iod">Informacje o danych</a></li>
 				<li><a href="#iiko">Instalacja i konfiguracja oprogramowania</a></li>
 				<ul>
-					<li><a href="#iiko1">postgreSQL</a></li>
-					<li><a href="#iiko2">jdk</a></li>
-					<li><a href="#iiko3">python</a></li>
+					<li><a href="#iiko1">PostgreSQL</a></li>
+					<li><a href="#iiko2">Jdk</a></li>
+					<li><a href="#iiko3">Python</a></li>
 				</ul>
 				<li><a href="#psql">PostgreSQL</a></li>
 				<ul>
-					<li><a href="#psql1">import danych</a></li>
-					<li><a href="#psql2">przykładowy rekord</a></li>
-					<li><a href="#psql3">ilość danych</a></li>
-					<li><a href="#psql4">usuwanie danych</a></li>
-					<li><a href="#psql5">wyświetlenie danych</a></li>
+					<li><a href="#psql1">Import danych</a></li>
+					<li><a href="#psql2">Przykładowy rekord</a></li>
+					<li><a href="#psql3">Ilość danych</a></li>
+					<li><a href="#psql4">Usuwanie danych</a></li>
+					<li><a href="#psql5">Wyświetlenie danych</a></li>
 				</ul>
 				<li><a href="#es">Elasticsearch</a></li>
 				<ul>
-					<li><a href="#es1">import danych</a></li>
-					<li><a href="#es2">przykładowy rekord</a></li>
-					<li><a href="#es3">ilość danych</a></li>
-					<li><a href="#es4">usuwanie danych</a></li>
-					<li><a href="#es5">wyświetlenie danych</a></li>
+					<li><a href="#es1">Import danych</a></li>
+					<li><a href="#es2">Przykładowy rekord</a></li>
+					<li><a href="#es3">Ilość danych</a></li>
+					<li><a href="#es4">Usuwanie danych</a></li>
+					<li><a href="#es5">Wyświetlenie danych</a></li>
 				</ul>
 				<li><a href="#pod">Podsumowanie</a></li>
 			</ul>
@@ -67,13 +67,13 @@
 		</p>
 		</br>
 		<h2 id="iiko">Instalacja i konfiguracja oprogramowania</h2>
-		<h3 id="iiko1">postgreSQL</h3>
+		<h3 id="iiko1">PostgreSQL</h3>
 		<p>
 			Baza, na której odbywały się badania - postrgeSQL.
 		</br>
 			Link do pobrania - <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target="_blank">TUTAJ</a>.
 		</p>
-		<h3 id="iiko2">jdk</h3>
+		<h3 id="iiko2">Jdk</h3>
 		<p>
 			Do badań na bazie elasticsearch potrzebny jest jdk.
 		</br>
@@ -90,7 +90,7 @@
 		</br>
 			Jeśli nie, zaznaczamy zmienną, klikamy <i>Edytuj...</i> oraz zmieniamy ścieżkę i ponownie uruchamiamy komputer.
 		</p>
-		<h3 id="iiko3">python</h3>
+		<h3 id="iiko3">Python</h3>
 		<p>
 			Python będzie potrzebny do uruchomienia skryptów.
 		</br>
@@ -98,7 +98,7 @@
 		</p>
 		</br>
 		<h2 id="psql">PostgreSQL</h2>
-		<h3 id="psql1">import danych</h3>
+		<h3 id="psql1">Import danych</h3>
 		<p>
 			1. Pobrać dane
 		</br></br>
@@ -134,7 +134,7 @@ pgfutter --pass "[hasło]" --table "test" csv map.csv
 			<div class="description-image">Import danych do postgreSQL</div>
 		</br>
 		</p>
-		<h3 id="psql2">przykładowy rekord</h3>
+		<h3 id="psql2">Przykładowy rekord</h3>
 		<p>
 			Uruchamiamy serwer
 			<div class="command">
@@ -163,7 +163,7 @@ select * from import.test limit 1;
 			</div>
 			<div class="description-image">Przykładowy rekord postreSQL</div>
 		</p>
-		<h3 id="psql3">ilość danych</h3>
+		<h3 id="psql3">Ilość danych</h3>
 		<p>
 			1. Polecenie do wyświetlenia - jaka ilość danych została zaimportowana:
 			<div class="command">
@@ -178,7 +178,7 @@ select count(*) from import.test;
 			<div class="description-image">Ilość danych postreSQL</div>
 			Czas wykonania zapytania - ok. 2 sekundy.
 		</p>	
-		<h3 id="psql4">usuwanie danych</h3>
+		<h3 id="psql4">Usuwanie danych</h3>
 		<p>
 			Niektóre kolumny zawierają puste pola np. kolumny ze współrzędnymi <i>x</i> oraz <i>y</i>.
 			</br>
@@ -197,7 +197,7 @@ delete from import.test where x='' and y='';
 		</p>
 		</br>
 		<h2 id="es">Elasticsearch</h2>
-		<h3 id="es1">import danych</h3>
+		<h3 id="es1">Import danych</h3>
 		<p>
 			1. Pobierz plik z danymi - <a href="https://data.gov.uk/dataset/national-statistics-postcode-lookup-latest-centroids">LINK</a>
 		</br>
@@ -248,24 +248,47 @@ logstash -f btc.conf
 			</br>
 			Tutaj wkleić screeny i wyniki!!!!!!!!!
 		</p>
-		<h3 id="es2">przykładowy rekord</h3>
+		<h3 id="es2">Przykładowy rekord</h3>
 		<p>
 			TODO	
 		</p>
-		<h3 id="es3">ilość danych</h3>
+		<h3 id="es3">Ilość danych</h3>
 		<p>
 			TODO
 		</p>	
-		<h3 id="es4">usuwanie danych</h3>
+		<h3 id="es4">Usuwanie danych</h3>
 
 			TODO
 		</p>
-		<h3 id="es5">wyświetlenie danych</h3>
+		<h3 id="es5">Wyświetlenie danych</h3>
 		<p>
 			TODO
 		</p>
 		<h2 id="pod">Podsumowanie</h2>
-		TODO
+		Na podstawie przeprowadzonych badań, można zrobić małe podsumowanie, którego wyniki przedstawiono poniżej:
+		</br>
+		<table class="informations table-center">
+			<tr>
+				<th>Nazwa</th>
+				<th>Wartość</th>
+			</tr>
+			<tr>
+				<td>todo</td>
+				<td>TODO</td>
+			</tr>
+			<tr>
+				<td>todo</td>
+				<td>TODO</td>
+			</tr>
+			<tr>
+				<td>todo</td>
+				<td>TODO</td>
+			</tr>
+			<tr>
+				<td>System operacyjny</td>
+				<td>Windows 8.1 x64</td>
+			</tr>
+		</table>
 	</br>
 	<div class = "return">
 		<a href="../index.html">powrót</a>
