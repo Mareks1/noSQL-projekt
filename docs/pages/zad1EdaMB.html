@@ -245,19 +245,43 @@ logstash -f btc.conf
 				</code>
 			</div>
 			</br>
-			Tutaj wkleić screeny i wyniki!!!!!!!!!
+			Import danych trwał 2 godz. 45 min.
 		</p>
 		<h3 id="es2">Przykładowy rekord</h3>
 		<p>
-			TODO	
+			Po wykonanym imporcie danych należy wpisać polecenie, które wyświetli przykładowy rekord:
+			<div class="command">
+				<code>
+curl -s "http://localhost:9200/test/_search?size=1&pretty=1&filter_path=hits.hits._source"
+				</code>
+			</div>
+		</br>
 		</p>
 		<h3 id="es3">Ilość danych</h3>
 		<p>
-			TODO
+			Polecenie do sprawdzenia jaka ilość danych została zaimportowanych:
+			<div class="command">
+				<code>
+curl -XGET localhost:9200/test/_count
+				</code>
+			</div>
+			Wynik zapytania:
+			<div class="code">
+				<pre>
+					<code>
+{"count":2593613,"_shards":{"total":5,"successful":5,"failed":0}}
+					</code>
+				</pre>
+			</div>
 		</p>	
 		<h3 id="es4">Usuwanie danych</h3>
 
-			TODO
+			Polecenie usunięcia wszystkich danych, w którcyh <i>objectid</i> = 11 :
+			<div class="command">
+				<code>
+curl -XDELETE "http://localhost:9200/test?q=objectid:'11'&filter_path=hits.hits._source"	
+				</code>
+			</div>	
 		</p>
 		<h3 id="es5">Wyświetlenie danych</h3>
 		<p>
