@@ -276,7 +276,7 @@ curl -XGET localhost:9200/test/_count
 		</p>	
 		<h3 id="es4">Usuwanie danych</h3>
 
-			Polecenie usunięcia wszystkich danych, w którcyh <i>objectid</i> = 11 :
+			Polecenie usunięcia wszystkich danych, w których <i>objectid</i> = 11 :
 			<div class="command">
 				<code>
 curl -XDELETE "http://localhost:9200/test?q=objectid:'11'&filter_path=hits.hits._source"	
@@ -285,7 +285,12 @@ curl -XDELETE "http://localhost:9200/test?q=objectid:'11'&filter_path=hits.hits.
 		</p>
 		<h3 id="es5">Wyświetlenie danych</h3>
 		<p>
-			TODO
+			Polecenie wyświetlenia wszystkich danych, w których <i>ru11ind</i> = 6, polecenie:
+			<div class="command">
+				<code>
+curl -s "http://localhost:9200/test/_search?pretty=true&q=ru11ind:'6'&filter_path=hits.hits._source
+				</code>
+			</div>
 		</p>
 		<h2 id="pod">Podsumowanie</h2>
 		Na podstawie przeprowadzonych badań, można zrobić małe podsumowanie, którego wyniki przedstawiono poniżej:
