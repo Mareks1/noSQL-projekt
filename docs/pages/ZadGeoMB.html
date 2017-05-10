@@ -329,7 +329,12 @@ curl -s "http://localhost:9200/test/_search?size=1&pretty=1" | jq .hits.hits[].\
 			Polecenie, które pokaże pierwsze 2000 danych:
 			<div class="command">
 				<code>
-curl -s "http://localhost:9200/test/test/_search?size=2000&pretty=1" | jq .hits.hits[].\"_source\" | jq "{type:\"Feature\", properties: {objectid, pcd2, pcds, dointr, doterm, oseast100m, osnrth100m,oscty, odslaua, oslaua, osward, usertype, osgrdind, ctry, oshlthau, gor, oldha, nhscr, ccg, psed, cened ,edind, ward98, oa01, nhsrg, hro, lsoa01, ur01ind, msoa01, cannet, scn, oshaprev, oldpct, oldhro, pcon, canreg, pct, oseast1m, osnrth1m, oa11, lsoa11,msoa11,}, geometry: {type:\"Point\", coordinates: .location}}" | jq --slurp . | jq {type:\"FeatureCollection\",features:.} > map1.geojson
+					curl -s "http://localhost:9200/test/test/_search?size=2000&pretty=1"
+ | jq .hits.hits[].\"_source\"
+ | jq "{type:\"Feature\", 
+properties: {objectid, pcd2, pcds, dointr, doterm, oseast100m, osnrth100m,oscty, odslaua, oslaua, osward, usertype, osgrdind, ctry, oshlthau, gor, oldha, nhscr, ccg, psed, cened ,edind, ward98, oa01, nhsrg, hro, lsoa01, ur01ind, msoa01, cannet, scn, oshaprev, oldpct, oldhro, pcon, canreg, pct, oseast1m, osnrth1m, oa11, lsoa11,msoa11,},
+ geometry: {type:\"Point\", coordinates: .location}}"
+ | jq --slurp . | jq {type:\"FeatureCollection\",features:.} > map1.geojson 
 				</code>
 			</div>
 			<div class="text-center">
