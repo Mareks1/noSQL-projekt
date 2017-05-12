@@ -326,7 +326,7 @@ curl -s "http://localhost:9200/test/_search?size=1&pretty=1" | jq .hits.hits[].\
 			</br></br>
 		</p>
 		<h3 id="es4">Polecenie geodezyjne (mapki)</h3>
-			Polecenie, które pokaże pierwsze 2000 danych:
+			--- Polecenie, które pokaże pierwsze 2000 danych ---
 			<div class="command">
 				<code>
 curl -s "http://localhost:9200/test/test/_search?size=2000&pretty=1" </br>
@@ -336,6 +336,27 @@ curl -s "http://localhost:9200/test/test/_search?size=2000&pretty=1" </br>
  geometry: {type:\"Point\", coordinates: .location}}" </br>
  | jq --slurp . </br>
  | jq {type:\"FeatureCollection\",features:.} > map1.geojson 
+				</code>
+			</div>
+			Z właściwości, które podane są w poleceniu, faktycznie na mapie wykorzystywane są tylko 15 z 42. Oto one:
+			</br>
+			<div class="command">
+				<code>
+objectid </br>
+pcd2 </br>
+pcds </br>
+dointr </br>
+doterm </br>
+oseast1m </br>
+usertype </br>
+ctry </br>
+ccg </br>
+hro </br>
+pct </br>
+osnrth1m </br>
+ oa11 </br>
+lsoa11 </br>
+msoa11 </br>
 				</code>
 			</div>
 			<div class="text-center">
