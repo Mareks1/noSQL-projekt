@@ -328,15 +328,14 @@ curl -s "http://localhost:9200/test/_search?size=1&pretty=1" | jq .hits.hits[].\
 		<h3 id="es4">Polecenie geodezyjne (mapki)</h3>
 			--- Polecenie, które pokaże pierwsze 2000 danych ---
 			<div class="command">
-				<code>
-					do wglądu w kodzie
-# curl -s "http://localhost:9200/test/test/_search?size=2000&pretty=1" </br>
-#  | jq .hits.hits[].\"_source\" </br>
-#  | jq "{type:\"Feature\", </br>
-#  properties: {objectid, pcd2, pcds, dointr, doterm, oseast100m, osnrth100m,oscty, odslaua, oslaua, osward, usertype, osgrdind, ctry, oshlthau, gor, oldha, nhscr, ccg, psed, cened ,edind, ward98, oa01, nhsrg, hro, lsoa01, ur01ind, msoa01, cannet, scn, oshaprev, oldpct, oldhro, pcon, canreg, pct, oseast1m, osnrth1m, oa11, lsoa11,msoa11,}, </br>
-#  geometry: {type:\"Point\", coordinates: .location}}" </br>
-#  | jq --slurp . </br>
-#  | jq {type:\"FeatureCollection\",features:.} > map1.geojson 
+				# <code>
+ curl -s "http://localhost:9200/test/test/_search?size=2000&pretty=1" </br>
+  | jq .hits.hits[].\"_source\" </br>
+  | jq "{type:\"Feature\", </br>
+  properties: {objectid, pcd2, pcds, dointr, doterm, oseast100m, osnrth100m,oscty, odslaua, oslaua, osward, usertype, osgrdind, ctry, oshlthau, gor, oldha, nhscr, ccg, psed, cened ,edind, ward98, oa01, nhsrg, hro, lsoa01, ur01ind, msoa01, cannet, scn, oshaprev, oldpct, oldhro, pcon, canreg, pct, oseast1m, osnrth1m, oa11, lsoa11,msoa11,}, </br>
+  geometry: {type:\"Point\", coordinates: .location}}" </br>
+  | jq --slurp . </br>
+  | jq {type:\"FeatureCollection\",features:.} > map1.geojson 
 				</code>
 			</div>
 			Z właściwości, które podane są w poleceniu, faktycznie na mapie wykorzystywane są tylko 15 z 42. Oto one:
@@ -368,15 +367,14 @@ msoa11 </br>
 			</br>
 			(współrzędne: [-2.1, 57.15]),  (współrzędne: [-2.11,57.14]),  (współrzędne: [-2.12,57.16])
 			<div class="command">
-				<code>
-					do wglądu w kodzie
-# curl -XGET localhost:9200/test/_search?pretty -d "{\"size\":100,\"query\":{\"bool\":{\"must\":{\"match_all\":{}}, \"filter\":{\"geo_polygon\":{\"location\":{\"points\":[[-2.1, 57.15],[-2.11,57.14],[-2.12,57.16]]}}}}}}" </br>
-#  | jq .hits.hits[]._source </br>
-#  | jq "{type:\"Feature\", </br>
-#  properties: {objectid, pcd2, pcds, dointr, doterm, oseast100m, osnrth100m,oscty, odslaua, oslaua, osward, usertype, osgrdind, ctry, oshlthau, gor, oldha, nhscr, ccg, psed, cened ,edind, ward98, oa01, nhsrg, hro, lsoa01, ur01ind, msoa01, cannet, scn, oshaprev, oldpct, oldhro, pcon, canreg, pct, oseast1m, osnrth1m, oa11, lsoa11,msoa11,}, </br>
-#  geometry: {type:\"Point\", coordinates: .location}}" </br>
-#  | jq --slurp . </br>
-#  | jq {type:\"FeatureCollection\",features:.} > map2.geojson 
+				# <code>
+ curl -XGET localhost:9200/test/_search?pretty -d "{\"size\":100,\"query\":{\"bool\":{\"must\":{\"match_all\":{}}, \"filter\":{\"geo_polygon\":{\"location\":{\"points\":[[-2.1, 57.15],[-2.11,57.14],[-2.12,57.16]]}}}}}}" </br>
+  | jq .hits.hits[]._source </br>
+  | jq "{type:\"Feature\", </br>
+  properties: {objectid, pcd2, pcds, dointr, doterm, oseast100m, osnrth100m,oscty, odslaua, oslaua, osward, usertype, osgrdind, ctry, oshlthau, gor, oldha, nhscr, ccg, psed, cened ,edind, ward98, oa01, nhsrg, hro, lsoa01, ur01ind, msoa01, cannet, scn, oshaprev, oldpct, oldhro, pcon, canreg, pct, oseast1m, osnrth1m, oa11, lsoa11,msoa11,}, </br>
+  geometry: {type:\"Point\", coordinates: .location}}" </br>
+  | jq --slurp . </br>
+  | jq {type:\"FeatureCollection\",features:.} > map2.geojson 
 				</code>
 			</div>
 			<div class="text-center">
